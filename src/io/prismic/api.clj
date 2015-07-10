@@ -1,5 +1,6 @@
 (ns io.prismic.api
   (:require 
+    [io.prismic.config :as cfg]
     [clj-http.client :as client]))
 
 (def ^:dynamic *debug*      false)
@@ -9,6 +10,8 @@
 
 
 (defn get-api 
+  ([]
+   (get-api cfg/prismic-url cfg/prismic-token))
   ([url]
    (get-api url nil))
   ([url token]
