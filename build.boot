@@ -13,5 +13,6 @@
        :version "0.1.0"
        :description "clojure wrapper for prismic.io REST API"})
 
-
+(System/setProperty "prismic-url" (System/getenv "PRISMIC_URL"))
+(System/setProperty "prismic-token" (System/getenv "PRISMIC_TOKEN"))
 
